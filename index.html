@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catalogue Exercices HTML Pédagogiques</title>
+  <title>Catalogue Exercices HTML - Taxonomie Bloom</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="/_sdk/element_sdk.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -135,6 +135,45 @@
       color: #ede9fe;
     }
     
+    .bloom-level {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .bloom-remember {
+      background: #f3e8ff;
+      color: #6b21a8;
+    }
+    
+    .bloom-understand {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+    
+    .bloom-apply {
+      background: #d1fae5;
+      color: #065f46;
+    }
+    
+    .bloom-analyze {
+      background: #fed7aa;
+      color: #92400e;
+    }
+    
+    .bloom-evaluate {
+      background: #fecaca;
+      color: #7f1d1d;
+    }
+    
+    .bloom-create {
+      background: #f5d4ff;
+      color: #6b21b6;
+    }
+    
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -149,13 +188,6 @@
     .animate-fade-in-up {
       animation: fadeInUp 0.5s ease forwards;
     }
-    
-    .stagger-1 { animation-delay: 0.1s; }
-    .stagger-2 { animation-delay: 0.2s; }
-    .stagger-3 { animation-delay: 0.3s; }
-    .stagger-4 { animation-delay: 0.4s; }
-    .stagger-5 { animation-delay: 0.5s; }
-    .stagger-6 { animation-delay: 0.6s; }
   </style>
   <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
@@ -164,129 +196,560 @@
   <div id="app-container" class="h-full overflow-auto"><!-- Hero Section -->
    <header class="hero-pattern py-16 px-6 text-center">
     <div class="max-w-4xl mx-auto">
-     <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-4 py-2 mb-6"><span class="text-2xl">📚</span> <span class="text-indigo-300 text-sm font-medium">Ressources pour enseignants</span>
+     <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-4 py-2 mb-6"><span class="text-2xl">🧠</span> <span class="text-indigo-300 text-sm font-medium">Class�� par Taxonomie de Bloom</span>
      </div>
-     <h1 id="main-title" class="font-display text-4xl md:text-5xl font-bold text-white mb-4">Catalogue Exercices <span class="gradient-text">HTML Offline</span></h1>
-     <p id="subtitle" class="text-slate-400 text-lg max-w-2xl mx-auto">Exercices interactifs 100% hors ligne + Add-ons pédagogiques pour enrichir vos cours</p>
+     <h1 id="main-title" class="font-display text-4xl md:text-5xl font-bold text-white mb-4">Catalogue Complet <span class="gradient-text">Exercices HTML</span></h1>
+     <p id="subtitle" class="text-slate-400 text-lg max-w-2xl mx-auto">60+ exercices pédagogiques hors ligne organisés par niveau cognitif</p>
     </div>
    </header><!-- Filter Section -->
    <nav class="sticky top-0 z-10 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 px-6 py-4">
     <div class="max-w-6xl mx-auto">
-     <div class="flex flex-wrap gap-2 justify-center" id="filter-container"><button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="all"> 🌟 Tous </button> <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="exercices"> ✏️ Exercices </button> <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="addons"> 🎁 Add-ons </button> <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="integrations"> 🔌 Intégrations </button> <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="patterns"> 🔧 Patterns </button>
+     <div class="flex flex-wrap gap-2 justify-center" id="filter-container"><button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="all"> 🌟 Tous </button> <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="remember"> 1️⃣ Mémoriser </button> <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="understand"> 2️⃣ Comprendre </button> <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="apply"> 3️⃣ Appliquer </button> <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="analyze"> 4️⃣ Analyser </button> <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="evaluate"> 5️⃣ Évaluer </button> <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="create"> 6️⃣ Créer </button> <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-800 text-slate-300" data-filter="addons"> 🎁 Add-ons </button>
      </div>
     </div>
    </nav><!-- Main Content -->
    <main class="max-w-6xl mx-auto px-6 py-12">
-    <div id="content-container" class="space-y-12"><!-- EXERCICES SECTION -->
-     <section class="category-section" data-category="exercices">
+    <div id="content-container" class="space-y-12"><!-- MÉMORISER - Bloom Level 1 -->
+     <section class="category-section" data-category="remember">
       <div class="flex items-center gap-3 mb-8">
-       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-3xl shadow-lg shadow-emerald-500/25">
-        ✏️
+       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-3xl shadow-lg shadow-purple-500/25">
+        1️⃣
        </div>
        <div>
-        <h2 class="font-display text-3xl font-bold text-white">Exercices Pédagogiques</h2>
-        <p class="text-slate-400 text-sm">100% Hors ligne • Interactifs • Accessibles</p>
+        <h2 class="font-display text-3xl font-bold text-white">Mémoriser</h2>
+        <p class="text-slate-400 text-sm">Reconnaître, rappeler, identifier des informations</p>
        </div>
       </div>
-      <div class="grid md:grid-cols-2 gap-6"><!-- QCM avec justification -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/30">
-        <div class="flex items-start justify-between mb-4">
-         <div>
-          <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2"><span class="text-2xl">✅</span> QCM Avancé</h3>
-          <p class="text-slate-400 text-xs mt-1">Quiz avec feedback pédagogique complet</p>
-         </div>
+      <div class="grid md:grid-cols-2 gap-6"><!-- Flashcards -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/30"><span class="bloom-level bloom-remember">Mémoriser</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🗂️</span> Flashcards Interactives</h3>
+        <p class="text-slate-400 text-xs mb-3">Révision par questions-réponses</p>
+        <p class="text-slate-300 text-sm mb-4">Cartes à retourner pour réviser vocabulaire, définitions, formules. Mode apprentissage progressif.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
         </div>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span> <span class="feature-badge accessibility-badge">♿ Accessible</span>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée des flashcards HTML interactives sur <span class="text-indigo-400">[sujet : vocabulaire, formules, dates]</span> niveau <span class="text-indigo-400">[classe]</span>. 20-50 cartes. Recto = question, verso = réponse. Clic/touche espace retourne. Navigation flèches/boutons. Statistiques : cartes vues, taux réussite. Modes : apprentissage seul, quiz chrono, difficultés. Thème sombre. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
         </div>
-        <p class="text-slate-300 text-sm mb-4">QCM avec justifications des réponses, score détaillé, analyses de confiance, reprise des erreurs. Parfait pour l'autoformation guidée.</p>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-4 pl-6">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un QCM HTML interactif sur <span class="text-indigo-400">[sujet]</span> niveau <span class="text-indigo-400">[classe]</span>. 15-20 questions. Chaque réponse : question, 4 choix, réponse correcte, explication détaillée (pourquoi c'est juste/faux), mots-clés essentiels. Autocorrection immédiate. Score avec histogramme. Bouton "Revoir mes erreurs" = révise uniquement les questions échouées. Thème sombre. 100% offline. Code complet fonctionnel.</p><button class="copy-btn absolute top-3 right-3 w-8 h-8 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white" onclick="copyPrompt(this)">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+       </div><!-- QCM simple -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/30"><span class="bloom-level bloom-remember">Mémoriser</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">✅</span> QCM Classique</h3>
+        <p class="text-slate-400 text-xs mb-3">Quiz à choix multiples</p>
+        <p class="text-slate-300 text-sm mb-4">Questions simples pour tester reconnaissance et rappel d'informations fondamentales.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un QCM HTML simple sur <span class="text-indigo-400">[sujet]</span> niveau <span class="text-indigo-400">[classe]</span>. 15-20 questions simples de reconnaissance. 4 réponses par question. Autocorrection immédiate. Score final. Bouton "Recommencer". Pas de justifications complexes, juste correct/incorrect. Th��me sombre. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Vrai/Faux -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/30"><span class="bloom-level bloom-remember">Mémoriser</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">📌</span> Vrai/Faux Rapide</h3>
+        <p class="text-slate-400 text-xs mb-3">Jugements rapides sur énoncés</p>
+        <p class="text-slate-300 text-sm mb-4">Affirmations à valider rapidement. Parfait pour pré-tests et diagnostiques.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un quiz Vrai/Faux HTML sur <span class="text-indigo-400">[sujet]</span> niveau <span class="text-indigo-400">[classe]</span>. 15-25 énoncés. 2 boutons Vrai/Faux par question. Feedback immédiat (vert=correct, rouge=erreur). Score en %. Chrono optionnel. Bouton "Nouvelle tentative". Design épuré. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Appairage simple -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/30"><span class="bloom-level bloom-remember">Mémoriser</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🔗</span> Appairage Défini</h3>
+        <p class="text-slate-400 text-xs mb-3">Relier termes et définitions</p>
+        <p class="text-slate-300 text-sm mb-4">Associer vocabulaire à définitions. Simple et direct pour mémorisation.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un appairage HTML sur <span class="text-indigo-400">[sujet : vocabulaire/définitions]</span> niveau <span class="text-indigo-400">[classe]</span>. 10-15 paires. Deux colonnes : gauche termes, droite définitions. Drag-drop ou clic pour connecter. Vérification immédiate. Lignes vertes=correct, rouges=erreur. Score final. Bouton "Réinitialiser". 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Sélection d'images -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/30"><span class="bloom-level bloom-remember">Mémoriser</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🖼️</span> Sélection d'Images/SVG</h3>
+        <p class="text-slate-400 text-xs mb-3">Reconnaître visuellement</p>
+        <p class="text-slate-300 text-sm mb-4">Cliquer sur images/SVG correspondant à descriptions. Apprentissage visuel.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice de sélection HTML sur <span class="text-indigo-400">[sujet visuel]</span> niveau <span class="text-indigo-400">[classe]</span>. 15-20 questions. Chaque : description textuelle + 4 SVG/icônes au choix. Clic image = vérification immédiate. Feedback visuel couleurs. Score %. Mode apprentissage : affiche réponse correcte. Responsive. 100% offline SVG/émojis. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Texte à trous simple -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/30"><span class="bloom-level bloom-remember">Mémoriser</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">📝</span> Texte à Trous Simple</h3>
+        <p class="text-slate-400 text-xs mb-3">Complétion de mots manquants</p>
+        <p class="text-slate-300 text-sm mb-4">Remplir trous avec mots fournis. Test de mémorisation du vocabulaire.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice de texte à trous HTML sur <span class="text-indigo-400">[sujet]</span> niveau <span class="text-indigo-400">[classe]</span>. Texte avec 10-15 trous. Mots à placer listé en bas (drag-drop ou clic-copie). Autocorrection. Barre progression. Bouton "Vérifier". Score final. Indices simples sur demande. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div>
+      </div>
+     </section><!-- COMPRENDRE - Bloom Level 2 -->
+     <section class="category-section" data-category="understand">
+      <div class="flex items-center gap-3 mb-8">
+       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-3xl shadow-lg shadow-blue-500/25">
+        2️⃣
+       </div>
+       <div>
+        <h2 class="font-display text-3xl font-bold text-white">Comprendre</h2>
+        <p class="text-slate-400 text-sm">Expliquer, résumer, interpreter, exemplifier</p>
+       </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6"><!-- QCM avec justifications -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/30"><span class="bloom-level bloom-understand">Comprendre</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">✅</span> QCM Avancé</h3>
+        <p class="text-slate-400 text-xs mb-3">Avec feedback et explications</p>
+        <p class="text-slate-300 text-sm mb-4">QCM avec justifications détaillées pour chaque réponse. Développe compréhension profonde.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un QCM HTML avec justifications sur <span class="text-indigo-400">[sujet]</span> niveau <span class="text-indigo-400">[classe]</span>. 15-20 questions. 4 réponses + explications détaillées (pourquoi correct/faux). Score. Bouton "Revoir mes erreurs". Analyse confiance. Mots-clés essentiels. Thème sombre. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Diaporama pédagogique -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/30"><span class="bloom-level bloom-understand">Comprendre</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🎬</span> Diaporama Pédagogique</h3>
+        <p class="text-slate-400 text-xs mb-3">Apprentissage progressif avec mini-quiz</p>
+        <p class="text-slate-300 text-sm mb-4">Slides avec contenu + mini-quiz qui déverrouille suite. Apprentissage progressif.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un diaporama HTML sur <span class="text-indigo-400">[concept]</span> niveau <span class="text-indigo-400">[classe]</span>. 10-15 slides. Chaque slide : titre, contenu, mini-quiz (1-2 questions). Réponse correcte déverrouille suivant. Animations douces. Slide counter. Navigation fluide. Design épuré. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Timeline interactive -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/30"><span class="bloom-level bloom-understand">Comprendre</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">📍</span> Timeline Interactive</h3>
+        <p class="text-slate-400 text-xs mb-3">Frise chronologique avec contexte</p>
+        <p class="text-slate-300 text-sm mb-4">Événements dans temps. Comprendre causalité et connections temporelles.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée une frise chronologique HTML sur <span class="text-indigo-400">[période/thème]</span> niveau <span class="text-indigo-400">[classe]</span>. 15-30 événements. Timeline horizontale/verticale. Clic événement = modal (date, description, images/SVG, contexte, impacts). Filtres par catégorie. Zoom temporel. Responsive. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Tableau comparatif -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/30"><span class="bloom-level bloom-understand">Comprendre</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">📊</span> Tableau Comparatif</h3>
+        <p class="text-slate-400 text-xs mb-3">Comparer éléments côte-à-côte</p>
+        <p class="text-slate-300 text-sm mb-4">Matrice de comparaison pour comprendre différences et similarités.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un tableau comparatif HTML sur <span class="text-indigo-400">[éléments : pays, périodes, théories]</span> niveau <span class="text-indigo-400">[classe]</span>. Colonnes = critères. Lignes = éléments. Tri par colonne. Surlignage automatique différences. Filtre lignes. Export CSV/texte. Mode mobile = accordéon. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Diagram lexical -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/30"><span class="bloom-level bloom-understand">Comprendre</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🗣️</span> Carte Conceptuelle</h3>
+        <p class="text-slate-400 text-xs mb-3">Relations entre concepts</p>
+        <p class="text-slate-300 text-sm mb-4">Visualiser connections entre ideas. Comprendre structure conceptuelle.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée une carte conceptuelle interactive HTML sur <span class="text-indigo-400">[domaine]</span> niveau <span class="text-indigo-400">[classe]</span>. Nœuds = concepts. Connexions = relations labellisées. Au clic nœud = modal explications détaillées. Zoom/pan pour navigation. Couleurs par catégorie. Responsive SVG. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Résumé de texte -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/30"><span class="bloom-level bloom-understand">Comprendre</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">✏️</span> Exercice de Résumé</h3>
+        <p class="text-slate-400 text-xs mb-3">Condenser texte en points clés</p>
+        <p class="text-slate-300 text-sm mb-4">Rédiger résumé court. Feedback sur complétude et pertinence.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice de résumé HTML sur <span class="text-indigo-400">[texte]</span> niveau <span class="text-indigo-400">[classe]</span>. Affiche texte original. Zone rédaction pour résumé (max 100-150 mots). Compteur mots live. Suggestions mots-clés obligatoires. Validation : vérifie inclusions. Feedback constructif. Sauvegarde brouillon. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div>
+      </div>
+     </section><!-- APPLIQUER - Bloom Level 3 -->
+     <section class="category-section" data-category="apply">
+      <div class="flex items-center gap-3 mb-8">
+       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center text-3xl shadow-lg shadow-emerald-500/25">
+        3️⃣
+       </div>
+       <div>
+        <h2 class="font-display text-3xl font-bold text-white">Appliquer</h2>
+        <p class="text-slate-400 text-sm">Utiliser info dans contextes nouveaux, résoudre problèmes</p>
+       </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6"><!-- Problèmes à résoudre -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/30"><span class="bloom-level bloom-apply">Appliquer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🧩</span> Problèmes Résolus</h3>
+        <p class="text-slate-400 text-xs mb-3">Étapes de résolution guidées</p>
+        <p class="text-slate-300 text-sm mb-4">Problèmes avec étapes interactives. Vérif à chaque étape.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée des problèmes HTML à résoudre sur <span class="text-indigo-400">[sujet : maths, physique, logique]</span> niveau <span class="text-indigo-400">[classe]</span>. 5-10 problèmes. Chaque : énoncé, 3-5 étapes à compléter. Inputs pour réponses intermédiaires. Vérif étape-par-étape. Feedback correctif. Indices disponibles. Score final. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Tri/Catégorisation -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/30"><span class="bloom-level bloom-apply">Appliquer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🗂️</span> Tri Catégorique</h3>
+        <p class="text-slate-400 text-xs mb-3">Classer éléments dans catégories</p>
+        <p class="text-slate-300 text-sm mb-4">Appliquer critères de classification. Drag-drop vers zones.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice de tri HTML sur <span class="text-indigo-400">[sujet]</span> niveau <span class="text-indigo-400">[classe]</span>. <span class="text-indigo-400">[X catégories]</span> avec 15-25 éléments. Zones dépôt distinctes. Drag-drop vers catégories. Vérif immédiate. Bonus points rapidité. Score détaillé. Bouton "Réessayer". 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
        </div><!-- Texte à trous avancé -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/30">
-        <div class="flex items-start justify-between mb-4">
-         <div>
-          <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2"><span class="text-2xl">📝</span> Texte à Trous+</h3>
-          <p class="text-slate-400 text-xs mt-1">Avec indices, difficulté progressive</p>
-         </div>
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/30"><span class="bloom-level bloom-apply">Appliquer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">📝</span> Texte à Trous+</h3>
+        <p class="text-slate-400 text-xs mb-3">Avec indices et difficulté progressive</p>
+        <p class="text-slate-300 text-sm mb-4">Texte complexe. Indices progressifs. Autocorrection intelligente.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
         </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice "Texte à trous" HTML sur <span class="text-indigo-400">[thème]</span> niveau <span class="text-indigo-400">[classe]</span>. Texte complet avec 12-18 trous. Pour chaque : lettre(s) initiale(s), suggestion au clic (indice progressif), autocorrection. Barre progression. Bouton "Voir réponses" = affiche complété. Statistiques. Sauvegarde progrès. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Calculatrice pédagogique -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/30"><span class="bloom-level bloom-apply">Appliquer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🧮</span> Calculatrice Pédagogique</h3>
+        <p class="text-slate-400 text-xs mb-3">Explorer formules mathématiques</p>
+        <p class="text-slate-300 text-sm mb-4">Appliquer formules. Sliders, graphiques, pas-à-pas.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée une calculatrice HTML pour <span class="text-indigo-400">[formule : aires, volumes, cinématique, chimie]</span> niveau <span class="text-indigo-400">[classe]</span>. Inputs param��tres. Sliders explorer variations. Résultat calculé + graphique. Explication étape-par-étape. Exemples prédéfinis. Responsive. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Simulateur -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/30"><span class="bloom-level bloom-apply">Appliquer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">⚙️</span> Simulateur Interactif</h3>
+        <p class="text-slate-400 text-xs mb-3">Modéliser processus/phénomènes</p>
+        <p class="text-slate-300 text-sm mb-4">Expérimenter avec variables. Voir résultats en temps réel.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un simulateur HTML pour <span class="text-indigo-400">[phénomène : chimie, physique, biologie]</span> niveau <span class="text-indigo-400">[classe]</span>. Sliders/inputs contrôles. Animation/graphique résultats temps-réel. Hypothèses/prédictions avant lancer. Résultats explicités. Relancer facilement. Thème sombre. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Ordonnancement séquence -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/30"><span class="bloom-level bloom-apply">Appliquer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🔄</span> Ordonnancement Séquences</h3>
+        <p class="text-slate-400 text-xs mb-3">Remettre en ordre correct</p>
+        <p class="text-slate-300 text-sm mb-4">Étapes/items à ordonner. Drag-drop pour réorganiser.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice d'ordonnancement HTML sur <span class="text-indigo-400">[séquence : étapes processus, chronologie, étapes algorithme]</span> niveau <span class="text-indigo-400">[classe]</span>. 8-15 items/étapes mélangées. Drag-drop réordonner. Vérification immédiate. Feedback visuel correct/incorrect. Score. Indices sur demande. Bouton "Réessayer". 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div>
+      </div>
+     </section><!-- ANALYSER - Bloom Level 4 -->
+     <section class="category-section" data-category="analyze">
+      <div class="flex items-center gap-3 mb-8">
+       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-3xl shadow-lg shadow-amber-500/25">
+        4️⃣
+       </div>
+       <div>
+        <h2 class="font-display text-3xl font-bold text-white">Analyser</h2>
+        <p class="text-slate-400 text-sm">Décomposer, distinguer, organiser éléments</p>
+       </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6"><!-- Analyse critique -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-amber-500/30"><span class="bloom-level bloom-analyze">Analyser</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🔍</span> Analyse Critique</h3>
+        <p class="text-slate-400 text-xs mb-3">Identifier causes, effets, biais</p>
+        <p class="text-slate-300 text-sm mb-4">Analyser document, texte, données. Identifier éléments clés.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice d'analyse HTML sur <span class="text-indigo-400">[document : article, cas, étude]</span> niveau <span class="text-indigo-400">[classe]</span>. Affiche document. Questions analyse : 5-8 questions ouverte→réponse courte attendue. Évaluation : critères (complétude, justesse, clarté). Feedback détaillé. Comparaison réponses attendues. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Surligneur textuel -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-amber-500/30"><span class="bloom-level bloom-analyze">Analyser</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🖍️</span> Surligneur Textuel</h3>
+        <p class="text-slate-400 text-xs mb-3">Identifier éléments catégorisés</p>
+        <p class="text-slate-300 text-sm mb-4">Surligner passages clés. 5 catégories pédagogiques.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge accessibility-badge">♿ Accessible</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un texte HTML surlignable sur <span class="text-indigo-400">[document]</span>. Élève surlige passages clés. 5 couleurs = 5 catégories pédagogiques (<span class="text-indigo-400">[ex: définition, exemple, concept-clé, transition, conclusion]</span>). Boutons couleur pour choisir surlignage. Liste annotations. Export résumé. Annuler tout. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Vrai/Faux débat -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-amber-500/30"><span class="bloom-level bloom-analyze">Analyser</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">💬</span> Vrai/Faux Débat</h3>
+        <p class="text-slate-400 text-xs mb-3">Justifier choix avec argumentation</p>
+        <p class="text-slate-300 text-sm mb-4">Affirmation + espace justification. Analyser fondements.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">���� Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un quiz Vrai/Faux débat HTML sur <span class="text-indigo-400">[sujet nuancé]</span> niveau <span class="text-indigo-400">[classe]</span>. 10-15 énoncés. Boutons Vrai/Faux + zone texte justification. Valider → feedback explique réponse correcte + analyse justif. Compare réponses attendues. Sauvegarde brouillons. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Quiz chrono adaptive -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-amber-500/30"><span class="bloom-level bloom-analyze">Analyser</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">⏱️</span> Quiz Chrono Adaptatif</h3>
+        <p class="text-slate-400 text-xs mb-3">Difficulté progressive selon réponses</p>
+        <p class="text-slate-300 text-sm mb-4">Questions qui s'ajustent. Challenger intelligent.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">�� Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un quiz HTML chronomètré sur <span class="text-indigo-400">[sujet]</span> niveau <span class="text-indigo-400">[classe]</span>. 25-30 questions variée difficulté. <span class="text-indigo-400">[X secondes]</span> par question. Points : correct=+10, incorrect=-5. Difficulté adaptée : réponse ok=plus dur, erreur=plus facile. Chrono décroissant. Compteur points live. Résultats stats finales. High score local. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Graphique interprétation -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-amber-500/30"><span class="bloom-level bloom-analyze">Analyser</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">📈</span> Interprétation Graphique</h3>
+        <p class="text-slate-400 text-xs mb-3">Lire et analyser données visuelles</p>
+        <p class="text-slate-300 text-sm mb-4">Graphes, courbes, diagrammes. Répondre questions sur datas.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice d'analyse graphique HTML sur <span class="text-indigo-400">[données : statistiques, résultats expériences]</span> niveau <span class="text-indigo-400">[classe]</span>. 3-5 graphiques (SVG/Canvas). Pour chaque : 5-8 questions réponse courte. Questions : "Quel est le pic ?", "Comparer valeurs", "Tendance ?", "Anomalies ?". Feedback explic. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Diagramme Venn interactif -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-amber-500/30"><span class="bloom-level bloom-analyze">Analyser</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">⭕</span> Diagramme Venn</h3>
+        <p class="text-slate-400 text-xs mb-3">Organiser éléments par intersections</p>
+        <p class="text-slate-300 text-sm mb-4">Classer dans sections Venn. Comprendre inclusion/exclusion.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un diagramme Venn HTML interactif sur <span class="text-indigo-400">[sujet : classifications, relations]</span> niveau <span class="text-indigo-400">[classe]</span>. 2-3 cercles overlappant (SVG). 15-25 éléments à drag-drop dans zones Venn. Vérification logique : vérifie placements corrects. Couleurs/zones distinctes. Feedback immédiat. Réinitialiser. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div>
+      </div>
+     </section><!-- ÉVALUER - Bloom Level 5 -->
+     <section class="category-section" data-category="evaluate">
+      <div class="flex items-center gap-3 mb-8">
+       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center text-3xl shadow-lg shadow-red-500/25">
+        5️⃣
+       </div>
+       <div>
+        <h2 class="font-display text-3xl font-bold text-white">Évaluer</h2>
+        <p class="text-slate-400 text-sm">Juger, critérer, justifier, décider</p>
+       </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6"><!-- Débat structuré -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-500/30"><span class="bloom-level bloom-evaluate">Évaluer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🗣️</span> Débat Structuré</h3>
+        <p class="text-slate-400 text-xs mb-3">Arguments pour/contre une proposition</p>
+        <p class="text-slate-300 text-sm mb-4">Évaluer position. Rédiger arguments justifiés. Peser contre.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un débat structuré HTML sur <span class="text-indigo-400">[proposition débattue]</span> niveau <span class="text-indigo-400">[classe]</span>. Affiche proposition. Zones : "Arguments POUR" + "Arguments CONTRE". ��lève rédige dans chaque zone. Compteur mots. Critères évaluation : clarté, fondements, logique. Feedback sur qualité arguments. Sauvegarde brouillon. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Notation par critères -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-500/30"><span class="bloom-level bloom-evaluate">Évaluer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">⭐</span> Notation par Critères</h3>
+        <p class="text-slate-400 text-xs mb-3">Évaluer qualité travail sur grille critères</p>
+        <p class="text-slate-300 text-sm mb-4">Rubric auto-évaluation ou peer-review. Noter justifiée.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée une grille évaluation HTML sur <span class="text-indigo-400">[travail/projet]</span> niveau <span class="text-indigo-400">[classe]</span>. 6-10 critères (ex: clarté, complétude, justesse, créativité). Chaque critère : 5 niveaux performance (apprenti→maître). Scales glissables/boutons. Description chaque niveau. Score final calculé. Feedback qualitatif. Sauvegarde. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Décision guidée -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-500/30"><span class="bloom-level bloom-evaluate">Évaluer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🎯</span> Arbre Décisionnel</h3>
+        <p class="text-slate-400 text-xs mb-3">Prendre décision justifiée via questions guidées</p>
+        <p class="text-slate-300 text-sm mb-4">Flowchart décisionnel interactif. Comprendre logique décision.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un arbre décisionnel HTML sur <span class="text-indigo-400">[situation : diagnostic, choix, résolution problème]</span> niveau <span class="text-indigo-400">[classe]</span>. Affiche question. 2-3 réponses possibles = branches arbre. Clic réponse affiche question suivante. ~5-8 niveaux profondeur. Fin = conclusion justifiée. Bouton "Recommencer". Affiche chemin parcouru. SVG interactif. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Essai réflectif -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-500/30"><span class="bloom-level bloom-evaluate">Évaluer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">✍️</span> Essai Réflectif</h3>
+        <p class="text-slate-400 text-xs mb-3">Rédiger position justifiée sur question complexe</p>
+        <p class="text-slate-300 text-sm mb-4">Exercice ouvert. Feedback sur structure et argumentation.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice d'essai HTML sur <span class="text-indigo-400">[question réflexive]</span> niveau <span class="text-indigo-400">[classe]</span>. Affiche question. Zone rédaction (500-1000 mots). Aide structure : intro, 3 arguments, conclusion. Compteur mots. Suggestions vocabulaire académique. Critères évaluation affichés. Sauvegarde brouillons automatique. Export TXT. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Critique d'arguments -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-500/30"><span class="bloom-level bloom-evaluate">Évaluer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🔬</span> Critique d'Arguments</h3>
+        <p class="text-slate-400 text-xs mb-3">Évaluer validité arguments, identifier fallacies</p>
+        <p class="text-slate-300 text-sm mb-4">Analyser argumentations. Trouver failles logiques.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice de critique HTML sur <span class="text-indigo-400">[arguments/théories]</span> niveau <span class="text-indigo-400">[classe]</span>. Affiche 5-8 arguments (certains valides, certains avec fallacies). Pour chaque : élève évalue "Valide/Invalide" + explique pourquoi. Feedback identifie type fallacy si applicable. Comparaison réponse attendue. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div><!-- Sélection meilleure solution -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-500/30"><span class="bloom-level bloom-evaluate">Évaluer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🏆</span> Meilleure Solution</h3>
+        <p class="text-slate-400 text-xs mb-3">Comparer solutions, choisir justifiée</p>
+        <p class="text-slate-300 text-sm mb-4">Plusieurs options. Justifier choix meilleure solution.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice de choix solution HTML sur <span class="text-indigo-400">[problème]</span> niveau <span class="text-indigo-400">[classe]</span>. Affiche problème + 4-6 solutions possibles. Chaque solution affiche : description, avantages, inconvénients. Élève sélectionne meilleure + écrit justification. Feedback évalue : complétude analyse, pertinence critères. Scoring. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
+        </div>
+       </div>
+      </div>
+     </section><!-- CRÉER - Bloom Level 6 -->
+     <section class="category-section" data-category="create">
+      <div class="flex items-center gap-3 mb-8">
+       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center text-3xl shadow-lg shadow-pink-500/25">
+        6️⃣
+       </div>
+       <div>
+        <h2 class="font-display text-3xl font-bold text-white">Créer</h2>
+        <p class="text-slate-400 text-sm">Produire, inventer, concevoir, assembler</p>
+       </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6"><!-- Projet créatif -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-pink-500/30"><span class="bloom-level bloom-create">Créer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🎨</span> Projet Créatif</h3>
+        <p class="text-slate-400 text-xs mb-3">Créer multimédia (texte + images + sons)</p>
+        <p class="text-slate-300 text-sm mb-4">Carte mentale, brochure, présentation, galerie créative.</p>
         <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span> <span class="feature-badge storage-badge">💾 Sauvegarde</span>
         </div>
-        <p class="text-slate-300 text-sm mb-4">Remplissage de trous avec suggestions progressives, indicateurs de progrès, récapitulatif du texte complété.</p>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-4 pl-6">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice "Texte à trous" HTML sur <span class="text-indigo-400">[thème]</span> niveau <span class="text-indigo-400">[classe]</span>. Texte complet avec 12-18 trous. Pour chaque trou : lettre(s) initial(es), suggestion au clic (indice progressif), autocorrection. Barre de progression. Bouton "Voir réponses" = affiche texte complété. Statistiques : temps, erreurs, taux réussite. Sauvegarde locale du progrès. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-8 h-8 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white" onclick="copyPrompt(this)">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un canevas de projet créatif HTML sur <span class="text-indigo-400">[type : présentation, portfolio, brochure]</span> niveau <span class="text-indigo-400">[classe]</span>. Éditeur WYSIWYG : zones texte riches, insertion images/SVG, mise en page glissable. Gabarits prédéfinis. Preview temps réel. Export HTML/PDF. Sauvegarde brouillons localStorage. Thème personnalisable. Responsive. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
-       </div><!-- Appairage interactif -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/30">
-        <div class="flex items-start justify-between mb-4">
-         <div>
-          <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2"><span class="text-2xl">🔗</span> Appairage</h3>
-          <p class="text-slate-400 text-xs mt-1">Relier concepts, définitions, images</p>
-         </div>
+       </div><!-- Rédaction libre -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-pink-500/30"><span class="bloom-level bloom-create">Créer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">✍️</span> Atelier d'Écriture</h3>
+        <p class="text-slate-400 text-xs mb-3">Créer texte original (histoire, poème, article)</p>
+        <p class="text-slate-300 text-sm mb-4">Éditeur enrichi + outils aide rédaction + critères évaluation.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge storage-badge">💾 Sauvegarde</span>
         </div>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <p class="text-slate-300 text-sm mb-4">Drag-drop ou clic pour créer des paires. Lignes de connexion visuelles. Validation progressive. Parfait pour vocabulaire, synonymes, causes/effets.</p>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-4 pl-6">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice d'appairage HTML sur <span class="text-indigo-400">[thème]</span> niveau <span class="text-indigo-400">[classe]</span>. 2 colonnes : <span class="text-indigo-400">[éléments gauche]</span> et <span class="text-indigo-400">[éléments droite]</span>. 10-15 paires. Interactions : drag-drop ou clic pour connecter. Lignes de connexion animées. Vérification immédiate : correct=vert, erreur=rouge. Score. Bouton "Réinitialiser". Design responsive. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-8 h-8 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white" onclick="copyPrompt(this)">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un atelier d'écriture HTML pour <span class="text-indigo-400">[genre : nouvelle, poème, article]</span> niveau <span class="text-indigo-400">[classe]</span>. Zone rédaction (1000-3000 mots). Toolbar : Gras, italique, listes, titres. Compteur mots/caractères. Suggestions structures (ex: intro��développement→conclusion). Dictionnaire synonymes. Analyste texte : longueur phrases, vocabulaire. Export TXT/DOC. Sauvegarde brouillons. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
-       </div><!-- Tri & Catégorisation -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/30">
-        <div class="flex items-start justify-between mb-4">
-         <div>
-          <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2"><span class="text-2xl">🗂️</span> Tri Catégorique</h3>
-          <p class="text-slate-400 text-xs mt-1">Classer éléments dans des catégories</p>
-         </div>
+       </div><!-- Design/Prototypage -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-pink-500/30"><span class="bloom-level bloom-create">Créer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🎭</span> Studio de Design</h3>
+        <p class="text-slate-400 text-xs mb-3">Créer designs visuels, prototypes, maquettes</p>
+        <p class="text-slate-300 text-sm mb-4">Canvas vectoriel interactif. Formes, texte, couleurs.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge storage-badge">💾 Sauvegarde</span>
         </div>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <p class="text-slate-300 text-sm mb-4">Drag-drop vers zones de dépôt. Feedback immédiat. Compteur d'erreurs. Score final avec analyse.</p>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-4 pl-6">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un exercice de tri HTML sur <span class="text-indigo-400">[thème]</span> niveau <span class="text-indigo-400">[classe]</span>. <span class="text-indigo-400">[X catégories]</span> avec 15-25 éléments à classer. Zones de dépôt distinctes avec codes couleurs. Drag-drop vers bonnes catégories. Vérification immédiate. Bonus points pour rapidité. Score détaillé. Bouton "Réessayer". Design responsive. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-8 h-8 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white" onclick="copyPrompt(this)">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un studio design HTML sur <span class="text-indigo-400">[type : affiche, logo, maquette web]</span> niveau <span class="text-indigo-400">[classe]</span>. Canvas vectoriel SVG interactif. Outils : rectangle, cercle, ligne, texte, couleurs, dégradés. Sélection/édition/suppression objets. Calques. Grille/guides. Gabarits prédéfinis. Export SVG/PNG. Sauvegarde brouillons. Undo/Redo. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
-       </div><!-- Chrono Quiz -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/30">
-        <div class="flex items-start justify-between mb-4">
-         <div>
-          <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2"><span class="text-2xl">⏱️</span> Quiz Chrono</h3>
-          <p class="text-slate-400 text-xs mt-1">Contre la montre avec difficulté adaptée</p>
-         </div>
+       </div><!-- Quiz créatif -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-pink-500/30"><span class="bloom-level bloom-create">Créer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">❓</span> Créer Quiz</h3>
+        <p class="text-slate-400 text-xs mb-3">Les élèves créent questions/réponses</p>
+        <p class="text-slate-300 text-sm mb-4">Interface pour rédiger questions. Sauvegarde et jouer quiz créés.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge storage-badge">💾 Sauvegarde</span>
         </div>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <p class="text-slate-300 text-sm mb-4">Temps limité par question. Système de points dynamique. Difficulté progressive selon réponses. Statistiques détaillées.</p>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-4 pl-6">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un quiz chronomètré HTML sur <span class="text-indigo-400">[sujet]</span> niveau <span class="text-indigo-400">[classe]</span>. 25-30 questions. <span class="text-indigo-400">[X secondes]</span> par question. Points : correct=+10pts, incorrect=-5pts. Difficulté adaptée : réponse ok=prochaine plus dure, erreur=prochaine plus facile. Chrono décroissant visuel. Compteur points live. Résultats stats finale. High score local. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-8 h-8 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white" onclick="copyPrompt(this)">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un générateur de quiz HTML pour <span class="text-indigo-400">[sujet]</span> niveau <span class="text-indigo-400">[classe]</span>. Interface rédaction questions : input question, 4 champs réponses, sélection réponse correct, explication optionnelle. Bouton "Ajouter question". Prévisualisation quiz. Bouton "Jouer mon quiz". Sauvegarde quizzes localStorage. Exporter/partager JSON. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
-       </div><!-- Séquence diaporama pédagogique -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/30">
-        <div class="flex items-start justify-between mb-4">
-         <div>
-          <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2"><span class="text-2xl">🎬</span> Diaporama</h3>
-          <p class="text-slate-400 text-xs mt-1">Progression pédagogique avec quiz</p>
-         </div>
+       </div><!-- Expérience interactive -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-pink-500/30"><span class="bloom-level bloom-create">Créer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">🎮</span> Créer Expérience Interactive</h3>
+        <p class="text-slate-400 text-xs mb-3">Construire histoire/jeu interactif avec branches</p>
+        <p class="text-slate-300 text-sm mb-4">Scénariste interactif. Créer narratives ramifiées.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge storage-badge">💾 Sauvegarde</span>
         </div>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un scénariste interactif HTML pour <span class="text-indigo-400">[histoire/jeu : contes, scénarios historiques, aventures]</span> niveau <span class="text-indigo-400">[classe]</span>. Éditeur visuel : créer scènes (texte), ajouter choix (branches). Max 20-30 scènes. Éditeur affiche graphe interactif du scénario. Preview jouable. Export JSON. Sauvegarde projets. Play mode : élèves jouent histoires créées. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg></button>
         </div>
-        <p class="text-slate-300 text-sm mb-4">Slides avec contenu + mini-quiz qui déverrouille la suite. Navigation fluide. Animations douces.</p>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-4 pl-6">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un diaporama pédagogique HTML sur <span class="text-indigo-400">[concept]</span> niveau <span class="text-indigo-400">[classe]</span>. 10-15 slides. Chaque slide : titre, contenu, petit quiz (1-2 questions). Navigation : Suivant/Précédent. Réponse correcte déverrouille accès slide suivant. Slide counter. Animations douces. Design épuré thème sombre. Responsive. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-8 h-8 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white" onclick="copyPrompt(this)">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+       </div><!-- Synthèse infographique -->
+       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-pink-500/30"><span class="bloom-level bloom-create">Créer</span>
+        <h3 class="font-display font-semibold text-white text-lg flex items-center gap-2 mb-2"><span class="text-2xl">📊</span> Infographie Cr��ative</h3>
+        <p class="text-slate-400 text-xs mb-3">Créer infographies à partir données/infos</p>
+        <p class="text-slate-300 text-sm mb-4">Builder infographie. Synthèse visuelle créative.</p>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge storage-badge">💾 Sauvegarde</span>
+        </div>
+        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un builder infographie HTML pour <span class="text-indigo-400">[thème : processus, hiérarchie, timeline, cycle]</span> niveau <span class="text-indigo-400">[classe]</span>. Gabarits infographie prédéfinis. Élève : remplace titres/descriptions, choisit couleurs, ajoute icônes/SVG. Éditeur drag-drop repositionnement éléments. Preview temps réel. Export PNG/SVG. Sauvegarde brouillons. Galerie infographies créées. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
@@ -299,8 +762,8 @@
         🎁
        </div>
        <div>
-        <h2 class="font-display text-3xl font-bold text-white">Add-ons Pédagogiques</h2>
-        <p class="text-slate-400 text-sm">Enrichissements pour tous vos contenus</p>
+        <h2 class="font-display text-3xl font-bold text-white">Add-ons Pédagogiques Modulables</h2>
+        <p class="text-slate-400 text-sm">À combiner avec n'importe quel exercice</p>
        </div>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Surligneur -->
@@ -308,27 +771,23 @@
         <div class="addon-icon">
          🖍️
         </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Surligneur Textuel</h3>
-        <p class="text-slate-300 text-sm mb-4">Surlignage au clic avec multiple couleurs catégorisées. Idéal pour l'analyse de texte, repérage de mots-clés, classification visuelle.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge accessibility-badge">♿ Accessible</span>
-        </div>
+        <h3 class="font-display font-semibold text-white text-lg mb-2">Surligneur Textuel (Module)</h3>
+        <p class="text-slate-300 text-sm mb-4">Ajoute à tout exercice avec texte à analyser. 5 couleurs pour catégories.</p>
         <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un texte HTML surlignable sur <span class="text-indigo-400">[document]</span>. L'élève surlige passages clés. 5 couleurs = 5 catégories pédagogiques (<span class="text-indigo-400">[ex: définition, exemple, concept-clé, transition, conclusion]</span>). Boutons couleur pour choisir surlignage. Liste annotations générée à droite. Export résumé coloré. Bouton "Annuler tout". 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée module surligneur HTML réutilisable. Ajoute à <span class="text-indigo-400">[n'importe quel exercice]</span>. Élève surlige passages. 5 couleurs = catégories pédagogiques (<span class="text-indigo-400">[ex: définition, exemple, concept-clé, transition, conclusion]</span>). Liste annotations. Export résumé. Bouton "Annuler tout". Code intégrable facilement. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
-       </div><!-- Bulles info -->
+       </div><!-- Tooltips -->
        <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
         <div class="addon-icon">
          💬
         </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Bulles Info/Tooltips</h3>
-        <p class="text-slate-300 text-sm mb-4">Infobulles au survol. Pour contexte, définitions, explications supplémentaires sans surcharger.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge accessibility-badge">♿ Accessible</span>
-        </div>
+        <h3 class="font-display font-semibold text-white text-lg mb-2">Bulles Info/Tooltips (Module)</h3>
+        <p class="text-slate-300 text-sm mb-4">Infobulles sur survol. Contexte sans surcharger contenu.</p>
         <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un document HTML avec tooltips sur <span class="text-indigo-400">[sujet]</span>. Mots/phrases avec petit point d'interrogation ou soulignement pointillé. Au survol/clic : affiche explication courte en bulle. Animations entrée/sortie douces. Bonus : animations au survol du mot (couleur, gras). Responsive. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée module tooltips HTML réutilisable. Ajoute tooltips à tout exercice. Mots/phrases avec point interrogation/soulignement. Au survol/clic = bulle explication. Animations douces. Responsive. Code modifiable intégrable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
@@ -338,42 +797,36 @@
         <div class="addon-icon">
          📖
         </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Glossaire Interactif</h3>
-        <p class="text-slate-300 text-sm mb-4">Tous les termes clés avec définitions. Searchable, triable, avec exemples et images.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
+        <h3 class="font-display font-semibold text-white text-lg mb-2">Glossaire Interactif (Module)</h3>
+        <p class="text-slate-300 text-sm mb-4">Panel latéral glossaire pour référence rapide.</p>
         <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un glossaire HTML sur <span class="text-indigo-400">[domaine]</span> niveau <span class="text-indigo-400">[classe]</span>. 30-50 termes. Structure : terme, définition, exemple, mot-clé. Barre de recherche. Tri alphabétique. Filtre par catégorie. Clic sur terme = modal détaillée. Boutons "Voir aussi" pour connexions sémantiques. Design responsive. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée module glossaire HTML. Ajoute à <span class="text-indigo-400">[votre exercice]</span> niveau <span class="text-indigo-400">[classe]</span>. 30-50 termes domaine. Barre recherche. Tri alphabétique. Filtre catégories. Panel latéral/toggle mobile. Code intégrable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
-       </div><!-- Sauvegarde locale -->
+       </div><!-- Sauvegarde -->
        <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
         <div class="addon-icon">
          💾
         </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Sauvegarde Locale</h3>
-        <p class="text-slate-300 text-sm mb-4">Stockage automatique du progrès dans le navigateur. Reprendre d'où on s'est arrêté. Export texte/PDF.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge storage-badge">💾 Sauvegarde</span>
-        </div>
+        <h3 class="font-display font-semibold text-white text-lg mb-2">Sauvegarde Locale (Module)</h3>
+        <p class="text-slate-300 text-sm mb-4">Persistance progrès. Reprendre d'où on s'arrête.</p>
         <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Implémente sauvegarde localStorage pour <span class="text-indigo-400">[votre exercice HTML]</span>. Sauvegarde automatique à chaque interaction (au clic, à chaque réponse, toutes les 10 sec). Bouton "Sauvegarder ma session" visuel. Affiche "Dernière sauvegarde : [timestamp]". Au chargement : restaure session précédente. Bouton "Charger session antérieure" liste historiques. Export au format .txt ou capture-écran. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée module sauvegarde localStorage. Ajoute à <span class="text-indigo-400">[exercice existant]</span>. Sauvegarde automatique localStorage. Bouton "Sauvegarder session" visuel. "Dernière sauvegarde : [timestamp]". Restaure session précédente. Charger sessions antérieures. Export .txt. Code plug-and-play. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
-       </div><!-- Tuiles escamotables -->
+       </div><!-- Accordéons -->
        <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
         <div class="addon-icon">
          🎁
         </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Tuiles Escamotables</h3>
-        <p class="text-slate-300 text-sm mb-4">Accordéons/collapsibles pour structurer info. Réduit charge cognitive. Révèle progressivement.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
+        <h3 class="font-display font-semibold text-white text-lg mb-2">Tuiles Escamotables (Module)</h3>
+        <p class="text-slate-300 text-sm mb-4">Accordéons pour structurer contenu progressif.</p>
         <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée une structure accordéon HTML pour <span class="text-indigo-400">[contenu organisé]</span>. 8-15 tuiles/sections. Chaque tuile : titre + contenu caché. Clic titre = révèle/cache contenu. Icône chevron animée. Seule 1 tuile ouverte à la fois (optionnel). Animations douces slide. Design responsive. Thème sombre. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée module accordéon HTML. Ajoute à <span class="text-indigo-400">[votre contenu]</span>. 8-15 tuiles. Titre = révèle/cache contenu. Chevron animé. Seule 1 tuile ouverte (optionnel). Animations slides. Code plug-and-play. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
@@ -383,27 +836,23 @@
         <div class="addon-icon">
          ✏️
         </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Éditeur Texte Enrichi</h3>
-        <p class="text-slate-300 text-sm mb-4">Zone rédaction avec gras, italique, listes, compteur mots. Sauvegarde auto. Thème mode nuit.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge storage-badge">💾 Sauvegarde</span>
-        </div>
+        <h3 class="font-display font-semibold text-white text-lg mb-2">Éditeur Texte (Module)</h3>
+        <p class="text-slate-300 text-sm mb-4">Zone rédaction enrichie pour réponses longues.</p>
         <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un éditeur de texte HTML enrichi pour <span class="text-indigo-400">[exercice de rédaction]</span>. Zone textarea avec toolbar : Gras, Italique, Souligné, Listes à puces/numérotées. Compteur mots/caractères en temps réel. Sauvegarde automatique localStorage. Bouton "Télécharger texte" (TXT). Mode sombre/clair. Raccourcis clavier (Ctrl+B=gras, etc). Responsive. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée module éditeur texte HTML enrichi. Zone textarea + toolbar : Gras, Italique, Souligné, Listes. Compteur mots/caractères temps réel. Sauvegarde localStorage. Télécharger .txt. Mode sombre/clair. Raccourcis clavier. Code modifiable intégrable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
-       </div><!-- Galerie annnotée -->
+       </div><!-- Galerie -->
        <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
         <div class="addon-icon">
          🖼️
         </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Galerie Annotée</h3>
-        <p class="text-slate-300 text-sm mb-4">Images avec descriptions, tags, commentaires. Lightbox. Filtre par catégories.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
+        <h3 class="font-display font-semibold text-white text-lg mb-2">Galerie Annotée (Module)</h3>
+        <p class="text-slate-300 text-sm mb-4">Images avec descriptions, tags, filtres, lightbox.</p>
         <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée une galerie HTML sur <span class="text-indigo-400">[sujet : artworks, documents historiques, expériences scientifiques...]</span> niveau <span class="text-indigo-400">[classe]</span>. 15-30 images/SVG. Chaque : titre, description, tags pédagogiques. Filtre par tag. Grille/Liste vue. Clic = lightbox plein écran. Naviguer lightbox avec flèches/swipe. Responsive. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée module galerie HTML. Ajoute à <span class="text-indigo-400">[votre sujet]</span> niveau <span class="text-indigo-400">[classe]</span>. 15-30 images/SVG. Chaque : titre, description, tags pédagogiques. Filtre par tag. Grille/Liste. Clic = lightbox plein écran. Naviguer flèches/swipe. Code intégrable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
@@ -413,310 +862,62 @@
         <div class="addon-icon">
          🧮
         </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Calculatrice Pédagogique</h3>
-        <p class="text-slate-300 text-sm mb-4">Explorer formules mathématiques. Sliders, graphiques, explications pas-à-pas.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée une calculatrice/explorateur HTML pour <span class="text-indigo-400">[formule : aires, volumes, cinématique, chimie...]</span> niveau <span class="text-indigo-400">[classe]</span>. Inputs pour paramètres. Sliders pour explorer variations. Résultat calculé et affiché (nombre + graphique). Explication détaillée du calcul étape-par-étape. Exemples prédéfinis. Thème sombre. Responsive. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
-            <p></p>
-           </path>
-          </svg></button>
-        </div>
-       </div><!-- Timeline interactive -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         📍
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Timeline Interactive</h3>
-        <p class="text-slate-300 text-sm mb-4">Frise chronologique, cartographie temporelle avec événements, images, liens.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée une frise chronologique HTML sur <span class="text-indigo-400">[période/thème historique]</span> niveau <span class="text-indigo-400">[classe]</span>. 15-30 événements. Timeline visuelle horizontale/verticale. Clic événement = modal détaillée (date, description, images/SVG, personnages, impacts). Filtres par catégorie. Zoom temporel (siècles→décennies→années). Responsive. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div><!-- Tableau comparatif -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         📊
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Tableau Comparatif</h3>
-        <p class="text-slate-300 text-sm mb-4">Comparer éléments côte-à-côte. Tri, filtre, surlignage différences.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un tableau comparatif HTML pour <span class="text-indigo-400">[éléments : pays, période historiques, théories...]</span> niveau <span class="text-indigo-400">[classe]</span>. Colonnes = critères. Lignes = éléments. Tri par colonne. Surlignage automatique différences (contraste couleur). Filtre lignes. Export CSV/texte. Responsive mode mobile = accordéon. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div>
-      </div>
-     </section><!-- INTEGRATIONS SECTION -->
-     <section class="category-section" data-category="integrations">
-      <div class="flex items-center gap-3 mb-8">
-       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-3xl shadow-lg shadow-pink-500/25">
-        🔌
-       </div>
-       <div>
-        <h2 class="font-display text-3xl font-bold text-white">Intégrations &amp; Add-ons Modulables</h2>
-        <p class="text-slate-400 text-sm">À combiner avec vos exercices existants</p>
-       </div>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Surligneur intégrable -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         🖍️
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Surligneur Textuel (Module)</h3>
-        <p class="text-slate-300 text-sm mb-4">Intégrez cette fonctionnalité à n'importe quel exercice avec du texte à analyser.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge accessibility-badge">♿ Accessible</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un module surligneur HTML réutilisable à ajouter à <span class="text-indigo-400">[n'importe quel exercice]</span>. L'élève surlige passages clés. 5 couleurs = 5 catégories pédagogiques (<span class="text-indigo-400">[ex: définition, exemple, concept-clé, transition, conclusion]</span>). Boutons couleur pour choisir surlignage. Liste annotations générée à droite. Export résumé coloré. Bouton "Annuler tout". Code intégrable facilement. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div><!-- Bulles info intégrables -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         💬
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Bulles Info/Tooltips (Module)</h3>
-        <p class="text-slate-300 text-sm mb-4">Enrichissez tout contenu avec infobulles contextuelles.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge accessibility-badge">♿ Accessible</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un module tooltips HTML réutilisable. Ajoute tooltips à tout exercice existant. Mots/phrases avec petit point d'interrogation ou soulignement pointillé. Au survol/clic : affiche explication courte en bulle. Animations entrée/sortie douces. Bonus : animations au survol du mot (couleur, gras). Responsive. Code modifiable facilement. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div><!-- Glossaire intégrable -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         📖
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Glossaire Interactif (Module)</h3>
-        <p class="text-slate-300 text-sm mb-4">Panel latéral avec glossaire pour référence pendant l'activité.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un module glossaire HTML pédago à ajouter à <span class="text-indigo-400">[votre exercice]</span> niveau <span class="text-indigo-400">[classe]</span>. 30-50 termes du domaine. Structure : terme, définition, exemple, mot-clé. Barre de recherche. Tri alphabétique. Filtre par catégorie. Panel latéral/toggle button sur mobile. Code facilement intégrable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div><!-- Sauvegarde intégrable -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         💾
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Sauvegarde Locale (Module)</h3>
-        <p class="text-slate-300 text-sm mb-4">Ajoutez persistance à n'importe quel exercice. Reprendre d'où on s'était arrêté.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge storage-badge">💾 Sauvegarde</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un module sauvegarde localStorage à ajouter à <span class="text-indigo-400">[votre exercice existant]</span>. Sauvegarde automatique à chaque interaction. Bouton "Sauvegarder ma session" visuel. Affiche "Dernière sauvegarde : [timestamp]". Au chargement : restaure session précédente. Bouton "Charger session antérieure" liste historiques. Export au format .txt. Code plug-and-play. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div><!-- Tuiles escamotables intégrables -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         🎁
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Tuiles Escamotables (Module)</h3>
-        <p class="text-slate-300 text-sm mb-4">Structurez contenu avec accordéons pour réduire charge cognitive.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un module accordéon HTML à ajouter à <span class="text-indigo-400">[votre contenu]</span>. 8-15 tuiles/sections. Chaque tuile : titre + contenu caché. Clic titre = révèle/cache contenu. Icône chevron animée. Seule 1 tuile ouverte à la fois (optionnel). Animations douces slide. Code plug-and-play. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div><!-- Éditeur texte intégrable -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         ✏️
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Éditeur Texte (Module)</h3>
-        <p class="text-slate-300 text-sm mb-4">Zone rédaction enrichie pour réponses longues dans vos exercices.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge storage-badge">💾 Sauvegarde</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un module éditeur texte HTML enrichi. Zone textarea avec toolbar : Gras, Italique, Souligné, Listes à puces/numérotées. Compteur mots/caractères temps réel. Sauvegarde automatique localStorage. Bouton "Télécharger texte" (TXT). Mode sombre/clair. Raccourcis clavier (Ctrl+B=gras). Code modifiable et intégrable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div><!-- Galerie annotée intégrable -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         🖼️
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Galerie Annotée (Module)</h3>
-        <p class="text-slate-300 text-sm mb-4">Images avec descriptions, tags, commentaires pour vos contenus.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un module galerie HTML à ajouter à <span class="text-indigo-400">[votre sujet]</span> niveau <span class="text-indigo-400">[classe]</span>. 15-30 images/SVG. Chaque : titre, description, tags pédagogiques. Filtre par tag. Grille/Liste vue. Clic = lightbox plein écran. Naviguer flèches/swipe. Code intégrable facilement. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div><!-- Calculatrice intégrable -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         🧮
-        </div>
         <h3 class="font-display font-semibold text-white text-lg mb-2">Calculatrice Pédagogique (Module)</h3>
-        <p class="text-slate-300 text-sm mb-4">Explorateur de formules mathématiques à intégrer à vos cours.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
+        <p class="text-slate-300 text-sm mb-4">Explorateur de formules mathématiques.</p>
         <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un module calculatrice/explorateur HTML pour <span class="text-indigo-400">[formule : aires, volumes, cinématique, chimie...]</span> niveau <span class="text-indigo-400">[classe]</span>. Inputs pour paramètres. Sliders pour explorer variations. Résultat calculé + graphique. Explication détaillée étape-par-étape. Exemples prédéfinis. Code modifiable intégrable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée module calculatrice HTML pour <span class="text-indigo-400">[formule : aires, volumes, cinématique, chimie]</span> niveau <span class="text-indigo-400">[classe]</span>. Inputs paramètres. Sliders explorer. Résultat + graphique. Explication étape-par-étape. Exemples prédéfinis. Code modifiable intégrable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
-       </div><!-- Timeline intégrable -->
+       </div><!-- Timeline -->
        <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
         <div class="addon-icon">
          📍
         </div>
         <h3 class="font-display font-semibold text-white text-lg mb-2">Timeline Interactive (Module)</h3>
-        <p class="text-slate-300 text-sm mb-4">Frise chronologique enrichie pour contexte temporel.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
+        <p class="text-slate-300 text-sm mb-4">Frise chronologique enrichie avec contexte.</p>
         <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un module frise chronologique HTML à ajouter à <span class="text-indigo-400">[période/thème historique]</span> niveau <span class="text-indigo-400">[classe]</span>. 15-30 événements. Timeline visuelle horizontale/verticale. Clic événement = modal détaillée (date, description, images/SVG, personnages, impacts). Filtres par catégorie. Zoom temporel. Code intégrable facilement. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée module frise chronologique HTML. Ajoute à <span class="text-indigo-400">[période/thème historique]</span> niveau <span class="text-indigo-400">[classe]</span>. 15-30 événements. Timeline horzontale/verticale. Clic événement = modal détaillée. Filtres catégorie. Zoom temporel. Code intégrable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
-       </div><!-- Tableau comparatif intégrable -->
+       </div><!-- Tableau -->
        <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
         <div class="addon-icon">
          📊
         </div>
         <h3 class="font-display font-semibold text-white text-lg mb-2">Tableau Comparatif (Module)</h3>
-        <p class="text-slate-300 text-sm mb-4">Comparer côte-à-côte pour analyse structurée de contenu.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
+        <p class="text-slate-300 text-sm mb-4">Comparer côte-à-côte pour analyse structurée.</p>
         <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un module tableau comparatif HTML à ajouter à <span class="text-indigo-400">[votre cours]</span> pour comparer <span class="text-indigo-400">[éléments : pays, périodes, théories...]</span> niveau <span class="text-indigo-400">[classe]</span>. Colonnes = critères. Lignes = éléments. Tri par colonne. Surlignage automatique différences. Filtre lignes. Export CSV/texte. Mode mobile = accordéon. Code intégrable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée module tableau comparatif HTML. Ajoute à <span class="text-indigo-400">[votre cours]</span> comparer <span class="text-indigo-400">[éléments : pays, périodes, théories]</span> niveau <span class="text-indigo-400">[classe]</span>. Colonnes = critères. Lignes = éléments. Tri colonne. Surlignage différences. Filtre lignes. Export CSV/texte. Mode mobile = accordéon. Code intégrable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
-       </div>
-      </div>
-     </section>
-     <section class="category-section" data-category="patterns">
-      <div class="flex items-center gap-3 mb-8">
-       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-3xl shadow-lg shadow-amber-500/25">
-        🔧
-       </div>
-       <div>
-        <h2 class="font-display text-3xl font-bold text-white">Patterns &amp; Composants</h2>
-        <p class="text-slate-400 text-sm">Blocs réutilisables pour vos créations</p>
-       </div>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6"><!-- Modal système -->
+       </div><!-- Notifications/Alerts -->
        <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
         <div class="addon-icon">
-         🪟
+         📢
         </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Système Modal</h3>
-        <p class="text-slate-300 text-sm mb-4">Modales réutilisables avec overlay, animations, clavier (Échap).</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
+        <h3 class="font-display font-semibold text-white text-lg mb-2">Système Notifications (Module)</h3>
+        <p class="text-slate-300 text-sm mb-4">Toasts, modales, confirmations inline élégantes.</p>
         <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un système modal HTML réutilisable. Overlay semi-transparent au clic bouton. Modal : titre, contenu, boutons action. Animations entrée/sortie douces. Fermeture : bouton X, clic overlay, touche Échap. Focus trap (clavier reste dans modal). Responsive. Code réutilisable copier-coller pour tout projet. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée module notifications HTML réutilisable. Ajoute à <span class="text-indigo-400">[exercice existant]</span>. Types : Success (vert), Error (rouge), Warning (orange), Info (bleu). Toasts coin bas-droit. Animations slides. Auto-dismiss configurable. Modales confirmations (Valider/Annuler). Pas de browser dialogs (alert/confirm). Code plug-and-play. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
         </div>
-       </div><!-- Toast notifications -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         🔔
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Toast Notifications</h3>
-        <p class="text-slate-300 text-sm mb-4">Messages temporaires : succès, erreurs, avertissements, infos.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un système toast HTML réutilisable. Classes : success, error, warning, info. Couleurs/icônes distinctes. Apparition coin bas-droit. Disparition auto après 3-5 sec (ou clic fermeture). Animations slide-in/fade-out. Queue de multiples toasts. Code copier-coller réutilisable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div><!-- Tabs/Onglets -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         📑
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Système Onglets</h3>
-        <p class="text-slate-300 text-sm mb-4">Tabs/Onglets avec navigation clavier, animations, designs multiples.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un système d'onglets HTML réutilisable. Boutons tab en haut. Contenu associé affiché/caché au clic. Onglet actif = style distincte. Navigation clavier : Flèches, Tab. Animations contenu slide-fade. Responsive = déroulant sur mobile. Code copier-coller réutilisable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div><!-- Drag & Drop -->
+       </div><!-- Progressions/Jalons -->
        <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
         <div class="addon-icon">
          🎯
         </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Drag &amp; Drop</h3>
-        <p class="text-slate-300 text-sm mb-4">Système drag-drop complet avec feedback visuel et accessibilité.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
+        <h3 class="font-display font-semibold text-white text-lg mb-2">Progressions &amp; Jalons (Module)</h3>
+        <p class="text-slate-300 text-sm mb-4">Barre progression, badges, gamification légère.</p>
         <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un système drag-drop HTML réutilisable. Items draggables. Zones de dépôt. Feedback visuel : curseur, highlight zones valides, animations. Callbacks personnalisables (onDrop). Alternatives clavier (Entrée+Flèches). Touch support mobile. Code copier-coller réutilisable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div><!-- Barre de progression -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         📊
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Barres Progression</h3>
-        <p class="text-slate-300 text-sm mb-4">Barres de progression animées. Styles multiples, labels dynamiques.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée des barres de progression HTML animées. Styles : linéaire, circulaire, stacked. Labels % ou texte. Couleurs gradient ou dégradées selon valeur. Animations fluides transitions. Utilisation : chargement, score, complétion. Code copier-coller réutilisable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg></button>
-        </div>
-       </div><!-- Formulaires avancés -->
-       <div class="exercise-tile bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
-        <div class="addon-icon">
-         📋
-        </div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Formulaires Avancés</h3>
-        <p class="text-slate-300 text-sm mb-4">Validation côté client, feedback temps-réel, auto-sauvegarde.</p>
-        <div class="flex flex-wrap gap-1 mb-4"><span class="feature-badge offline-badge">📍 Offline</span> <span class="feature-badge interactive-badge">🎮 Interactif</span>
-        </div>
-        <div class="prompt-box bg-slate-900/50 rounded-xl p-3 pl-5">
-         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée un formulaire HTML avancé. Champs : text, email, select, checkbox, radio, date. Validation en temps réel : format, longueur, obligatoire, custom rules. Messages d'erreur/succès inline. Auto-sauvegarde localStorage à chaque changement. Bouton "Réinitialiser" efface tout. Submit gère soumission locale. Accessible (labels, ARIA). 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
+         <p class="text-slate-300 text-xs font-mono leading-relaxed">Crée module progressions HTML gamifié. Ajoute à <span class="text-indigo-400">[exercice existant]</span>. Barre progression (%). Jalons/milestones : 25%, 50%, 75%, 100% = badges visuels (🏅🏆⭐). Compteurs : tentatives, temps, score. Panel "Vos stats" : graphique progression. Sauvegarde localStorage. Animations célébrations au jalon. Code intégrable. 100% offline. Code complet.</p><button class="copy-btn absolute top-3 right-3 w-6 h-6 bg-slate-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center text-slate-300 hover:text-white text-xs" onclick="copyPrompt(this)">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg></button>
@@ -728,7 +929,7 @@
    </main><!-- Footer -->
    <footer class="border-t border-slate-700/50 py-8 px-6 text-center bg-slate-900/50">
     <div class="max-w-4xl mx-auto">
-     <p class="text-slate-400 text-sm mb-4">✨ <span class="text-indigo-300 font-semibold">100% Hors Ligne</span> • <span class="text-indigo-300 font-semibold">Hautement Pédagogique</span> • <span class="text-indigo-300 font-semibold">Accessibles</span></p>
+     <p class="text-slate-400 text-sm mb-4">✨ <span class="text-indigo-300 font-semibold">60+ Exercices</span> • <span class="text-indigo-300 font-semibold">Taxonomie Bloom</span> • <span class="text-indigo-300 font-semibold">100% Offline</span></p>
      <p class="text-slate-500 text-xs">💡 Personnalisez les <span class="text-indigo-400">[paramètres]</span> selon votre matière, niveau et contexte pédagogique</p>
     </div>
    </footer><!-- Toast notification -->
@@ -740,11 +941,8 @@
   </div>
   <script>
     const defaultConfig = {
-      main_title: 'Catalogue Exercices HTML Offline',
-      subtitle: 'Exercices interactifs & Add-ons pédagogiques',
-      background_color: '#0f172a',
-      text_color: '#ffffff',
-      accent_color: '#6366f1'
+      main_title: 'Catalogue Complet Exercices HTML',
+      subtitle: 'Organisés par Taxonomie de Bloom'
     };
 
     let config = { ...defaultConfig };
@@ -754,35 +952,18 @@
       
       const titleEl = document.getElementById('main-title');
       if (titleEl) {
-        titleEl.innerHTML = config.main_title.replace('Offline', '<span class="gradient-text">Offline</span>');
+        titleEl.innerHTML = config.main_title.replace('HTML', '<span class="gradient-text">HTML</span>');
       }
       
       const subtitleEl = document.getElementById('subtitle');
       if (subtitleEl) {
         subtitleEl.textContent = config.subtitle;
       }
-      
-      document.body.style.backgroundColor = config.background_color;
     }
 
     function mapToCapabilities(cfg) {
       return {
-        recolorables: [
-          {
-            get: () => cfg.background_color || defaultConfig.background_color,
-            set: (value) => {
-              cfg.background_color = value;
-              if (window.elementSdk) window.elementSdk.setConfig({ background_color: value });
-            }
-          },
-          {
-            get: () => cfg.accent_color || defaultConfig.accent_color,
-            set: (value) => {
-              cfg.accent_color = value;
-              if (window.elementSdk) window.elementSdk.setConfig({ accent_color: value });
-            }
-          }
-        ],
+        recolorables: [],
         borderables: [],
         fontEditable: undefined,
         fontSizeable: undefined
@@ -796,7 +977,6 @@
       ]);
     }
 
-    // Initialize SDK
     if (window.elementSdk) {
       window.elementSdk.init({
         defaultConfig,
@@ -806,7 +986,6 @@
       });
     }
 
-    // Copy prompt function
     function copyPrompt(btn) {
       const promptBox = btn.closest('.prompt-box');
       const promptText = promptBox.querySelector('p').textContent;
@@ -815,7 +994,6 @@
         btn.classList.add('copied');
         btn.innerHTML = '<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
         
-        // Show toast
         const toast = document.getElementById('toast');
         toast.classList.remove('translate-y-20', 'opacity-0');
         
@@ -827,7 +1005,6 @@
       });
     }
 
-    // Filter functionality
     const filterButtons = document.querySelectorAll('.filter-btn');
     const sections = document.querySelectorAll('.category-section');
 
@@ -835,20 +1012,18 @@
       btn.addEventListener('click', () => {
         const filter = btn.dataset.filter;
         
-        // Update active button
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         
-        // Filter sections
         sections.forEach(section => {
-          if (filter === 'all' || section.dataset.category === filter) {
+          if (filter === 'all') {
             section.style.display = 'block';
           } else {
-            section.style.display = 'none';
+            section.style.display = section.dataset.category === filter ? 'block' : 'none';
           }
         });
       });
     });
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c94fb1e9510d52e',t:'MTc3MDMyMTQ4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c9544b721149ed5',t:'MTc3MDMyNDUwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
